@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дашборд</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__left">
+      <h1 id="brand" title="Кликни меня 👀">Dashboard</h1>
+      <div class="clock" id="clock" aria-live="off">
+        <span class="clock__time" id="clock-time">--:--:--</span>
+        <span class="clock__date" id="clock-date">…</span>
+      </div>
+    </div>
+
+    <div class="toolbar" role="toolbar" aria-label="Добавление виджетов">
+      <button data-add="todo">+ Список дел</button>
+      <button data-add="quote">+ Цитаты</button>
+      <button data-add="weather">+ Погода</button>
+      <button data-add="crypto">+ Крипта</button>
+    </div>
+
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Переключить тему"
+      title="Переключить тему"
+    >
+      <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      <span class="theme-toggle__label">Тема</span>
+    </button>
+  </header>
+
+  <main id="dashboard" class="dashboard" aria-live="polite"></main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2026 Королева Анастасия · Дашборд с виджетами</span>
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
